@@ -1,0 +1,9 @@
+--- ## Configuration file for MP3Slurp
+
+## Section for global settings
+mp3slurp:
+    # download_dir: if not specified here it will try ~/Downloads
+    # if ~/Downloads doesn't exist it will try your home directory
+    # if home doesn't exist you will see an error.
+    download_dir: ''
+    
