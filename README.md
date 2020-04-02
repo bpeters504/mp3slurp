@@ -1,11 +1,13 @@
-# YTMDL
-### YouTube Music Downloader
+# MP3Slurp
 
 ## Description
-Simple GTK 3 (GUI) wrapper for youtube-dl specifically to convert videos to mp3 files. Allowing you to specify the artist and title to be saved in the ID3 metadata.
+Create MP3 files from a list of YouTube URLs. If you specify the Atrist and Title, those tags will be added. If not specified, metadata from youtube will be used.
+
+This is a GTK 3 wrapper for youtube-dl and eyed3. Meant for use on Linux with Gnome.
 
 ## Dependancies
 
+- Gtk3
 - python 3
 - youtube_dl python module
     - `sudo pip3 install youtube_dl`
@@ -18,5 +20,5 @@ Simple GTK 3 (GUI) wrapper for youtube-dl specifically to convert videos to mp3 
 I should have an install process for Gnome Shell in the next few days but right now you just have to have config.yml and ytmdl.py in the same directory and run:
 
 ```bash
-$ ./ytmdl.pl
+$ ./mp3slurp.pl
 ```

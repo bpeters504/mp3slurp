@@ -8,7 +8,8 @@ from gi.repository import Gtk, Gdk, GObject
 from os.path import expanduser
 
 
-## Simple GTK 3 wrapper for youtube-dl to get MP3 audio file from youtube URL.
+## Simple GTK 3 wrapper for youtube-dl to create MP3 audio files
+## from a list of youtube URLs.
 ## Also allows ID3 tagging for Title and Artist.
 
 ## Global variables
@@ -184,10 +185,10 @@ def load_config():
         with open(dname + "/config.yml", "r") as ymlfile:
             cfg = yaml.safe_load(ymlfile)
         
-        if '~' in cfg['ytmdl']['download_dir']:
-            cfg['ytmdl']['download_dir'] = expanduser(cfg['ytmdl']['download_dir'])
-        if cfg['ytmdl']['download_dir'] and os.path.isdir(cfg['ytmdl']['download_dir']):
-            download_dir = cfg['ytmdl']['download_dir']
+        if '~' in cfg['mp3slurp']['download_dir']:
+            cfg['mp3slurp']['download_dir'] = expanduser(cfg['mp3slurp']['download_dir'])
+        if cfg['mp3slurp']['download_dir'] and os.path.isdir(cfg['mp3slurp']['download_dir']):
+            download_dir = cfg['mp3slurp']['download_dir']
         elif os.path.isdir(os.environ['HOME']+'/Downloads'):
             download_dir = os.environ['HOME']+'/Downloads'
         elif os.path.isdir(os.environ['HOME']):
