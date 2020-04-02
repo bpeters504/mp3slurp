@@ -182,7 +182,7 @@ def load_config():
         global cfg
         abspath = os.path.abspath(__file__)
         dname = os.path.dirname(abspath)
-        with open(dname + "/config.yml", "r") as ymlfile:
+        with open(dname + "/mp3slurp.yml", "r") as ymlfile:
             cfg = yaml.safe_load(ymlfile)
         
         if '~' in cfg['mp3slurp']['download_dir']:
