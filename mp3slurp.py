@@ -77,7 +77,7 @@ class EntryWindow(Gtk.Window):
     def __init__(self):
         self.clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
 
-        Gtk.Window.__init__(self, title="YouTube Music Downloader")
+        Gtk.Window.__init__(self, title="MP3 Slurp")
         self.set_default_size(1000,100)
         self.set_border_width(10)
         self.timeout_id = None
